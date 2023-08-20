@@ -1,0 +1,22 @@
+buildscript {
+    repositories {
+        gradlePluginPortal()
+        maven {
+            url = "https://packages.confluent.io/maven/"
+        }
+        maven {
+            url = "https://jitpack.io"
+        }
+    }
+}
+
+plugins {
+    id "com.github.imflog.kafka-schema-registry-gradle-plugin" version "+"
+}
+
+schemaRegistry {
+    url = "http://127.0.0.1:8081"
+    register {
+        subject("wiki-updates-avro-value", "src/avro/wiki-update.avsc", "AVRO")
+    }
+}

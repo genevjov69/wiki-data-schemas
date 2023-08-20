@@ -1,0 +1,15 @@
+{
+  "type": "record",
+  "namespace": "io.genevjov.wiki_data_schema_message",
+  "name": "WikiUpdate",
+  "fields": [
+    {
+      "name": "updateDetails",
+      "type": "string"
+    },
+    {
+      "name": "receivedAt",
+      "type": "long"
+    }
+  ]
+}
